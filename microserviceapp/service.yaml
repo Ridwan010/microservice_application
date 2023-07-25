@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: mongo
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mongo
@@ -36,4 +36,4 @@ spec:
   ports:
     - port: 27017
       targetPort: 27017
-  type: ClusterIP
+  type: LoadBalancer
